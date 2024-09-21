@@ -26,10 +26,22 @@ const newStringOne = "   hitesh    "
 console.log(newStringOne);
 console.log(newStringOne.trim());
 
+
+
+console.log(gameName.split('-'));
+const hardd="     Hardik     hare"
+console.log(hardd);
+console.log(hardd.trim());
+
+//Replace func
 const url = "https://hitesh.com/hitesh%20choudhary"
 
 console.log(url.replace('%20', '-'))
 
-console.log(url.includes('sundar'))
+console.log(url.includes('sundar')) //Includes gives us a bool value that whether that substring is present in a string or url .
 
-console.log(gameName.split('-'));
+//Splitting the string into array on bases of a character...
+const schoolName= "Hardik-Hare-Rohit-sharma-Sachin-Tendulakr"
+console.log(schoolName.split("-"));
+
+
