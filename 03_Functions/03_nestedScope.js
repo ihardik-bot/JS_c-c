@@ -40,3 +40,10 @@ function addone(num){
 // const addTwo = function(num){
 //     return num + 2
 // }
+const add={
+    Name : "Hardik",
+    Age : 22
+    
+    
+}
+console.log(add.Age);
