@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const div=document.createElement('div')//cerating a div in body.
+        console.log(div);
+        div.className="main" // givinng class name to div
+        div.id=Math.round(Math.random()*10+1)
+        div.setAttribute("title" , "generate")//set attribute does not override the value it create a new attribute in the div
+        div.style.backgroundColor="pink"
+        div.style.padding="52px" //As we have not connected the body to div it will not show the effect.
+        //Connecting the div to the body
+        const addtext=document.createTextNode("Chai aur code")
+        div.appendChild(addtext)
+        div.body.appendChild(div)
+
+    </script>
+</body>
+</html>

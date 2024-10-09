@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM |Chai aur Code </title>
+</head>
+<body style="background-color: #212121; color :aliceblue">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    //First target -> Select parent element and find what value lies beside it.
+    const parent=document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children); // This will give Html collection.It is almost array like property,
+    console.log(parent.children[1]);//Will give day Tuesday
+    console.log(parent.children[1].innerHTML);//Will give HTML value of tuesday(i.e, which is the text format)
+    //Printing inner HTML value of all class day using for loop b/c it is array like str hence we can use for loop.
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color="orange"
+    console.log(parent.firstElementChild)//will return  the first child
+    console.log(parent.lastElementChild)//will return  the last child
+    //We can also traverse from child to parent as given below..
+    //Query selector is expensive(time taking operation hence we will use another operation)
+    const dayOne=document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);//Will return parent element of first child
+    console.log(dayOne.nextElementSibling);//will retun its just native brother.
+    //NODE list is a complex tree strc..
+    console.log("NODES:",parent.childNodes);//OP=9 one parent then line break then child one then line break and so on
+    //Suppose you give two line break consecutively then HTML will render it as one..
+    
+</script>
+</html>
